@@ -17,4 +17,4 @@ npm run dev
 - `services`: acceso a datos (hoy lee `datos/`, luego la API)
 - `datos`, `interfaces`, `hooks`, `utilities`, `styles`
 
-Imágenes de portadas: `public/img/portadas/` (hoy se muestran bloques grises).
+Imágenes de portadas: `public/img/portadas/` (hoy 16 / 10 / 26  se muestran bloques grises).
