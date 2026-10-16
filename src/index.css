@@ -1,0 +1,243 @@
+/* src/index.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&display=swap');
+
+:root {
+    --gris: #9f9f9f;
+    --fuente-titulo: 'Unbounded', 'Arial Black', sans-serif;
+}
+
+html,
+body,
+#root {
+    min-height: 100%;
+}
+
+html {
+    scroll-padding-top: 5rem;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+#root,
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+:focus-visible {
+    outline: 3px solid var(--gris);
+    outline-offset: 3px;
+}
+
+/* Tipografía de títulos */
+.titulo-seccion,
+.card-seccion-nombre h3,
+.card-edicion h3,
+.portada-titulo,
+.portada-subtitulo,
+.boton-leer,
+.logo-revista-principal,
+.enlace-navegacion {
+    font-family: var(--fuente-titulo);
+    text-transform: uppercase;
+}
+
+.titulo-seccion {
+    font-weight: 900;
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    margin-bottom: 1.5rem;
+}
+
+/* Navbar */
+.logo-revista {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    color: #fff;
+}
+
+.logo-revista-superior {
+    font-family: var(--fuente-titulo);
+    font-size: .55rem;
+    letter-spacing: .5em;
+}
+
+.logo-revista-principal {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.enlace-navegacion {
+    font-weight: 700;
+    font-size: .75rem;
+}
+
+/* Portada */
+.portada {
+    background: var(--gris);
+    color: #fff;
+    min-height: clamp(14rem, 32vw, 18rem);
+    display: flex;
+}
+
+.portada > .container {
+    flex: 1;
+}
+
+.portada-contenido {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-block: 1.5rem;
+}
+
+.portada-flechas {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+.portada-flechas .flecha-carrusel {
+    pointer-events: auto;
+}
+
+.portada-titulo {
+    font-weight: 900;
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    margin-bottom: .4rem;
+}
+
+.portada-subtitulo {
+    font-weight: 900;
+    text-align: right;
+    margin: 0;
+    font-size: clamp(1rem, 2.6vw, 1.6rem);
+}
+
+.flecha-carrusel {
+    background: none;
+    border: 0;
+    padding: .5rem;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Nueva edición */
+.boton-leer {
+    background: #000;
+    color: #fff;
+    font-weight: 900;
+    padding: 1rem 3rem;
+    border-radius: 14px;
+}
+
+.boton-leer:hover {
+    background: #333;
+    color: #fff;
+}
+
+.imagen-placeholder {
+    background: var(--gris);
+    width: 100%;
+}
+
+/* Secciones */
+.card-seccion {
+    border: 2px solid #000;
+}
+
+.card-seccion-nombre {
+    background: var(--gris);
+    display: grid;
+    place-items: center;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.card-seccion-nombre h3 {
+    margin: 0;
+    font-weight: 900;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
+.card-seccion-texto {
+    margin: 0;
+    padding: 1.25rem;
+    font-weight: 600;
+    font-size: .9rem;
+    align-self: center;
+}
+
+/* Carrusel de ediciones */
+.carrusel-ediciones {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.carrusel-ediciones-pista {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card-edicion {
+    flex: 1;
+    max-width: 15rem;
+}
+
+.card-edicion h3 {
+    font-weight: 900;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    margin-bottom: .25rem;
+}
+
+.card-edicion p {
+    margin: 0;
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Quiénes somos */
+.quienes-somos {
+    background: #000;
+    color: #fff;
+}
+
+.quienes-somos p {
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+/* Contacto */
+.enlace-red {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .9rem;
+    word-break: break-all;
+}
